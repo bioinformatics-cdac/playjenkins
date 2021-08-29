@@ -20,6 +20,7 @@ pipeline {
             /kaniko/executor --dockerfile `pwd`/Dockerfile \
                              --context `pwd` \
                              --destination=bio-hub.pune.cdac.in/ci/myweb:${BUILD_NUMBER}
+                             --skip-tls-verify
             '''
           }
         }
